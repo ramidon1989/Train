@@ -1,8 +1,14 @@
-﻿using System;
+﻿/* Класс Train - представляет собой ООП-представление поезда.
+ * Реализован как усечённый вариант кольцевого двусвязного списка. Отсутствуют методы Add,Remove и пр.
+ * При создании экземпляра класса в качестве параметра конструктора указывается целочисленное значение,
+ * обзначающее количество вагонов в поезде. * 
+ * 
+ * */
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-
 namespace Task5
 {
     /// <summary>
@@ -23,8 +29,15 @@ namespace Task5
         /// </summary>
         Wagon tail;
 
+        /// <summary>
+        /// Количество вагонов в поезде.
+        /// </summary>
         public int Count { get { return WagonsList.Count; } }
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
+        /// <param name="Count"> Количество вагонов в поезде </param>
         public Train(int Count)
         {
             if(Count <= 0) throw new ArgumentException("Значение должно быть больше 0", nameof(Count));
@@ -55,7 +68,7 @@ namespace Task5
         }
 
         /// <summary>
-        /// Устанавливает первый и последний вагон.
+        /// Устанавливает первый,последний вагон и ссылки на свойста Next и Previous.
         /// </summary>
         void SetFirstAndTail()
         {

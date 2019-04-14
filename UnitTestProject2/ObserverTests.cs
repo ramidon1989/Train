@@ -15,7 +15,7 @@ namespace UnitTestProject2
             var expected = 50;
             Train train = new Train(expected);
 
-            var actual = Observer.CalculateWagonsCount(train, 5);
+            var actual = Observer.CalculateWagonsCount(train);
 
             Assert.AreEqual(expected, actual);
         }

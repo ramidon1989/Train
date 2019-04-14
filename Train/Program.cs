@@ -10,8 +10,8 @@ namespace Task5
             Train train = new Train(rndNumber);
 
             Console.WriteLine($"Количество вагонов {rndNumber} (Сгенереривано случайно)");
-            Console.WriteLine(new String('-', 30));
-            Console.WriteLine($"Количество вагонов, расчитанных алгоритмом равен {Observer.CalculateWagonsCount(train, new Random().Next(rndNumber))}");
+            Console.WriteLine(new String('-', 50));
+            Console.WriteLine($"Количество вагонов, расчитанных алгоритмом равен {Observer.CalculateWagonsCount(train)}");
 
             Console.ReadKey();
         }
